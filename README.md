@@ -169,7 +169,7 @@ module "nexus_privilege_wildcard" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
-| <a name="requirement_nexus"></a> [nexus](#requirement\_nexus) | >= 2.0.0 |
+| <a name="requirement_nexus"></a> [nexus](#requirement\_nexus) | >= 3.0.0 |
 
 ### Providers
 
@@ -215,3 +215,53 @@ No resources.
 ## Authors
 
 Module is maintained by [DevOps IA](https://github.com/devops-ia) with help from [these awesome contributors](https://github.com/nexus-module/terraform-nexus-privilege/graphs/contributors).
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_nexus"></a> [nexus](#requirement\_nexus) | >= 3.0.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_nexus_privilege_application"></a> [nexus\_privilege\_application](#module\_nexus\_privilege\_application) | ./modules/nexus-privilege-application | n/a |
+| <a name="module_nexus_privilege_repository_admin"></a> [nexus\_privilege\_repository\_admin](#module\_nexus\_privilege\_repository\_admin) | ./modules/nexus-privilege-repository-admin | n/a |
+| <a name="module_nexus_privilege_repository_content_selector"></a> [nexus\_privilege\_repository\_content\_selector](#module\_nexus\_privilege\_repository\_content\_selector) | ./modules/nexus-privilege-repository-content-selector | n/a |
+| <a name="module_nexus_privilege_repository_view"></a> [nexus\_privilege\_repository\_view](#module\_nexus\_privilege\_repository\_view) | ./modules/nexus-privilege-repository-view | n/a |
+| <a name="module_nexus_privilege_script"></a> [nexus\_privilege\_script](#module\_nexus\_privilege\_script) | ./modules/nexus-privilege-script | n/a |
+| <a name="module_nexus_privilege_wildcard"></a> [nexus\_privilege\_wildcard](#module\_nexus\_privilege\_wildcard) | ./modules/nexus-privilege-wildcard | n/a |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_nexus_privilege_application"></a> [nexus\_privilege\_application](#input\_nexus\_privilege\_application) | Privilege Application. | <pre>list(object({<br>    name        = string<br>    description = optional(string)<br>    actions     = list(string)<br>    domain      = string<br>  }))</pre> | `[]` | no |
+| <a name="input_nexus_privilege_repository_admin"></a> [nexus\_privilege\_repository\_admin](#input\_nexus\_privilege\_repository\_admin) | Privilege Repository Admin. | <pre>list(object({<br>    name        = string<br>    description = optional(string)<br>    actions     = list(string)<br>    repository  = string<br>    format      = string<br>  }))</pre> | `[]` | no |
+| <a name="input_nexus_privilege_repository_content_selector"></a> [nexus\_privilege\_repository\_content\_selector](#input\_nexus\_privilege\_repository\_content\_selector) | Privilege Repository Content Selector. | <pre>list(object({<br>    name             = string<br>    description      = string<br>    actions          = list(string)<br>    repository       = string<br>    format           = string<br>    content_selector = string<br>  }))</pre> | `[]` | no |
+| <a name="input_nexus_privilege_repository_view"></a> [nexus\_privilege\_repository\_view](#input\_nexus\_privilege\_repository\_view) | Privilege Repository View. | <pre>list(object({<br>    name        = string<br>    description = optional(string)<br>    actions     = list(string)<br>    repository  = string<br>    format      = string<br>  }))</pre> | `[]` | no |
+| <a name="input_nexus_privilege_script"></a> [nexus\_privilege\_script](#input\_nexus\_privilege\_script) | Privilege Script. | <pre>list(object({<br>    name        = string<br>    description = optional(string)<br>    actions     = list(string)<br>    script_name = string<br>  }))</pre> | `[]` | no |
+| <a name="input_nexus_privilege_wildcard"></a> [nexus\_privilege\_wildcard](#input\_nexus\_privilege\_wildcard) | Privilege Repository Wilcard. | <pre>list(object({<br>    name        = string<br>    description = optional(string)<br>    pattern     = optional(string)<br>  }))</pre> | `[]` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_privilege_application_name"></a> [privilege\_application\_name](#output\_privilege\_application\_name) | The name of the privilege application. |
+| <a name="output_privilege_repository_admin_name"></a> [privilege\_repository\_admin\_name](#output\_privilege\_repository\_admin\_name) | The name of the privilege repository admin. |
+| <a name="output_privilege_repository_content_selector_name"></a> [privilege\_repository\_content\_selector\_name](#output\_privilege\_repository\_content\_selector\_name) | The name of the privilege repository content selector. |
+| <a name="output_privilege_repository_view_name"></a> [privilege\_repository\_view\_name](#output\_privilege\_repository\_view\_name) | The name of the privilege repository view. |
+| <a name="output_privilege_repository_wildcard_name"></a> [privilege\_repository\_wildcard\_name](#output\_privilege\_repository\_wildcard\_name) | The name of the privilege wildcard. |
+| <a name="output_privilege_script_name"></a> [privilege\_script\_name](#output\_privilege\_script\_name) | The name of the privilege script. |
+<!-- END_TF_DOCS -->
