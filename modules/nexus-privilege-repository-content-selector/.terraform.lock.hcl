@@ -8,6 +8,7 @@ provider "registry.terraform.io/datadrivers/nexus" {
     "h1:5ziRyBTR7Z0+OeXEaVKEHrsMbDHp4lcO/3WDTmq0ECQ=",
     "h1:86eBFIt8+5DezK34zTPBgLgY2ieiCbecxsHNhfWhNXg=",
     "h1:PeSoMDET1fapUz6YVLLxjTbTQjAYR8/LM+Tfb8o3SZE=",
+    "h1:V4mLHODvcCzv5hE+mlW4hBkZ1BmSJHqY5QeOiBNBeyM=",
     "h1:aFY2vNGJ76s44fsTwSo8OPZoE8wITpY4w/A/k9TuyV0=",
     "h1:ujs4QcIuH8miTpo88Pn5GvL9BGNvFGq3NqwcmRfOYg4=",
     "zh:3cc43f3c10138e6d7101576ed3be2f9cf9401e85ecb4c7b661fa3fbca7e181e4",
